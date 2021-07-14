@@ -55,9 +55,11 @@ function App() {
     })
   }
 
+  /*
   const setMaxVal = () => {
     return 1+14+14+21+16;
   }
+  */
 
   const randomColGen = () => {
     const h_Val = randomNumber(360,0);
@@ -70,12 +72,14 @@ function App() {
 
   useEffect(() => {
     randomQuote();
-  }, [quotesData]);
-
-  const hueOffset = 20;
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
   //This is redundant - kept just in case I decide to add background option functionality - might be useful as a hue offset background generator
+  /*
+  const hueOffset = 20;
   const bgGradient = {background: "radial-gradient(circle, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 120%), linear-gradient(" + randomNumber(160,20) + "deg, hsl(" + (colors.hue-hueOffset) + ", " + colors.saturate + ", " + colors.light + ") " + randomNumber(28, 5) + "%, hsl(" + colors.hue + ", " + colors.saturate + ", " + colors.light + ") " + randomNumber(61, 38) + "%, hsl(" + (colors.hue+hueOffset) + ", " + colors.saturate + ", " + colors.light + ") " + randomNumber(95, 72) + "%)"};
+  */
 
   const bgGrad = {background: "radial-gradient(circle, rgba(0,0,0,0) 0%, rgba(0,0,0,0) 120%),  linear-gradient(" + 
         randomNumber(160,20) + "deg, " + randomColGen() + " " + randomNumber(28, 5) + "%, hsl(" + colors.hue + ", " + colors.saturate + ", " + colors.light + ") " + randomNumber(61, 38) + "%, " + randomColGen() + " " + randomNumber(95, 72) + "%)", animation:"bgAnim 20000ms ease infinite alternate"};
