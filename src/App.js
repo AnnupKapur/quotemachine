@@ -70,7 +70,7 @@ function App() {
 
   useEffect(() => {
     randomQuote();
-  }, []);
+  }, [quotesData]);
 
   const hueOffset = 20;
 
