@@ -55,6 +55,10 @@ function App() {
     })
   }
 
+  const setMaxVal = () => {
+    return 1+14+14+21+16;
+  }
+
   const randomColGen = () => {
     const h_Val = randomNumber(360,0);
     const s_Val = randomNumber(100,60);
