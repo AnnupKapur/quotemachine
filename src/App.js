@@ -58,7 +58,7 @@ function App() {
   const randomColGen = () => {
     const h_Val = randomNumber(360,0);
     const s_Val = randomNumber(100,60);
-    const l_Val = randomNumber(100,60);
+    const l_Val = randomNumber(100,0);
 
     return "hsl(" + h_Val + ", " + s_Val + "%, " + l_Val + "%)";
   }
@@ -75,8 +75,7 @@ function App() {
   //This is redundant - kept just in case I decide to add background option functionality - might be useful as a hue offset background generator
   const bgGradient = {background: "radial-gradient(circle, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 120%), linear-gradient(" + randomNumber(160,20) + "deg, hsl(" + (colors.hue-hueOffset) + ", " + colors.saturate + ", " + colors.light + ") " + randomNumber(28, 5) + "%, hsl(" + colors.hue + ", " + colors.saturate + ", " + colors.light + ") " + randomNumber(61, 38) + "%, hsl(" + (colors.hue+hueOffset) + ", " + colors.saturate + ", " + colors.light + ") " + randomNumber(95, 72) + "%)"};
 
-  const bgGrad = {background: 
-      "linear-gradient(" + 
+  const bgGrad = {background: "radial-gradient(circle, rgba(0,0,0,0) 0%, rgba(0,0,0,0) 120%),  linear-gradient(" + 
         randomNumber(160,20) + "deg, " + randomColGen() + " " + randomNumber(28, 5) + "%, hsl(" + colors.hue + ", " + colors.saturate + ", " + colors.light + ") " + randomNumber(61, 38) + "%, " + randomColGen() + " " + randomNumber(95, 72) + "%)", animation:"bgAnim 20000ms ease infinite alternate"};
 
   const quoteCol = {color:"hsl(" + colors.hue + ", " + colors.saturate + ", " + colors.light + ")"}
