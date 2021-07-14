@@ -68,8 +68,6 @@ function App() {
     randomQuote();
   }, []);
 
-  //THINK ABOUT COMPONENT DID MOUNT FOR ONLOAD FUNCATIONALITY
-
   const hueOffset = 20;
 
   //This is redundant - kept just in case I decide to add background option functionality - might be useful as a hue offset background generator
