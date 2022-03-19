@@ -26,7 +26,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: hsla(0, 0%, 10%, 1);
+  background-color: hsla(100, 100%, 100%, 1);
   box-shadow: 0em 0em 10em 0em black;
   font-size: 1rem;
   border-radius: 1em;
